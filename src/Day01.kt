@@ -21,16 +21,16 @@ fun main() {
         return firstList.sumOf { it * (similarityMap[it] ?: 0) }
     }
 
-    // Test if implementation meets criteria from the description, like:
+    // simple tests
     check(part1(listOf("1 2", "2 3")) == 2)
     check(part2(listOf("1 2", "2 3", "4 2")) == 4)
 
+    // check provided examples
     val testInput = readInput("Day01_test")
-    // Or read a large test input from the `src/Day01_test.txt` file:
     check(part1(testInput) == 11)
-    check(part2(readInput("Day01_test")) == 31)
+    check(part2(testInput) == 31)
 
-    // Read the input from the `src/Day01.txt` file.
+    // actual input
     val input = readInput("Day01")
     part1(input).println()
     part2(input).println()
